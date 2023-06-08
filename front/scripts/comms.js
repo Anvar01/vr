@@ -26,11 +26,13 @@ function addPlayer(id, position, model, customization) {
   newPlayer.setAttribute("player", "");
   newPlayer.appendChild(texture);
 
+  console.log(customization);
+
   var mask = document.createElement("a-entity");
-  mask.setAttribute("gltf-model", customization.mask.model);
-  mask.setAttribute("position", customization.mask.position);
-  mask.setAttribute("rotation", customization.mask.rotation);
-  mask.setAttribute("scale", customization.mask.scale);
+  mask.setAttribute("gltf-model", customizationN.model);
+  mask.setAttribute("position", customizationN.position);
+  mask.setAttribute("rotation", customizationN.rotation);
+  mask.setAttribute("scale", customizationN.scale);
   newPlayer.appendChild(mask);
 
   var backpack = document.createElement("a-entity");
